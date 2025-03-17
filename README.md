@@ -29,3 +29,7 @@ Here are the changes included:
 14. Portable Biofuel Tank increased to 2000000 units
 15. Flashlight charge duration increased to 32500 units
 16. Battery lamp charge duration increased to 65000 units
+
+#Supported command line arguments:
+dist	->	if specified, the final mod.pak will not be copied to game mods folder
+pause	->	if specified, the proccess will pause before executing each s big step

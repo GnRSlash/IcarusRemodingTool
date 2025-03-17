@@ -230,7 +230,7 @@
                     "listValue": "Refrigerator",
                     "keyPath": "StartingSlots",
                     "keyValue": 48
-                
+                },
                 {
                     "isList": true,
                     "listName": "Rows",
