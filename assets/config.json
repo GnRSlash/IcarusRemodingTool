@@ -1,0 +1,513 @@
+{
+    "Config": {
+        "SteamAppsFolder": "C:\\Program Files (x86)\\Steam\\steamapps\\common",
+        "UnrealPakFolder": "C:\\Users\\slash\\Desktop\\Newfolder\\UnrealPak\\Engine\\Binaries\\Win64",
+        "OutputModFolder": "C:\\Users\\slash\\Desktop\\Newfolder\\SlashIcarusMod",
+        "JSONIdent": "    "
+    },
+    "files_to_modify": [
+        {
+            "description": "Speeds up crafting for Biofuel from 2500 to 1250",
+            "data_pak": "Crafting\\D_ProcessorRecipes.json",
+            "keys_to_modify": [
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Biofuel1",
+                    "keyPath": "RequiredMillijoules",
+                    "keyValue": 1250
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Biofuel2",
+                    "keyPath": "RequiredMillijoules",
+                    "keyValue": 1250
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Biofuel3",
+                    "keyPath": "RequiredMillijoules",
+                    "keyValue": 1250
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Biofuel4",
+                    "keyPath": "RequiredMillijoules",
+                    "keyValue": 1250
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Biofuel5",
+                    "keyPath": "RequiredMillijoules",
+                    "keyValue": 1250
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Biofuel6",
+                    "keyPath": "RequiredMillijoules",
+                    "keyValue": 1250
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Biofuel7",
+                    "keyPath": "RequiredMillijoules",
+                    "keyValue": 1250
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Biofuel8",
+                    "keyPath": "RequiredMillijoules",
+                    "keyValue": 1250
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Biofuel9",
+                    "keyPath": "RequiredMillijoules",
+                    "keyValue": 1250
+                }
+            ]
+        },
+        {
+            "description": "Player Base Weight increased from 100 to 200",
+            "data_pak": "Stats\\D_CharacterStartingStats.json",
+            "keys_to_modify": [
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Base_Stats",
+                    "keyPath": "StatsGranted.(Value=\"BaseWeightCapacity_+\")",
+                    "keyValue": 400
+                }
+            ]
+        },
+        {
+            "description": "Player Map Icon size doubled",
+            "data_pak": "UI\\D_MapIcons.json",
+            "keys_to_modify": [
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Player",
+                    "keyPath": "ScaleFactor",
+                    "keyValue": 2
+                }
+            ]
+        },
+        {
+            "description": "- Lumber Yield Talent increased from 20% to 400% (remember this is random chance)- Rock Star Talent increased from 20% to 400% (remember this is random chance)- Peerless Lumberjack talent increased from 1% to 10%- Lucky Strike talent increased from 1% to 5%",
+            "data_pak": "Talents\\D_Talents.json",
+            "keys_to_modify": [
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Resources_Increased_Wood",
+                    "keyPath": "Rewards[2].GrantedStats.(Value=\"BaseFellingRewards_+%\")",
+                    "keyValue": 400
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Resources_Increased_Stone",
+                    "keyPath": "Rewards[2].GrantedStats.(Value=\"BaseMiningStoneRewards_+%\")",
+                    "keyValue": 400
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Resources_Instant_Tree",
+                    "keyPath": "Rewards[0].GrantedStats.(Value=\"BaseChanceToFellTreeInstantly_%\")",
+                    "keyValue": 10
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Resources_Voxel_Instant",
+                    "keyPath": "Rewards[0].GrantedStats.(Value=\"BaseChanceToMineVoxelInstantly_+%\")",
+                    "keyValue": 5
+                }
+            ]
+        },
+        {
+            "description": "- Added behaviors to Wolves: Standing and Lying- Added behaviors to Moa: Neutral and Agressive Engagement",
+            "data_pak": "AI\\D_Mounts.json",
+            "keys_to_modify": [
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Wolf",
+                    "keyPath": "SupportedMovementStates",
+                    "keyValue": [
+                        "Follow",
+                        "IdleWander",
+                        "IdleStanding",
+                        "IdleLying"
+                    ]
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Snow_Wolf",
+                    "keyPath": "SupportedMovementStates",
+                    "keyValue": [
+                        "Follow",
+                        "IdleWander",
+                        "IdleStanding",
+                        "IdleLying"
+                    ]
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Wolf_Desert",
+                    "keyPath": "SupportedMovementStates",
+                    "keyValue": [
+                        "Follow",
+                        "IdleWander",
+                        "IdleStanding",
+                        "IdleLying"
+                    ]
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Moa",
+                    "keyPath": "SupportedCombatStates",
+                    "keyValue": [
+                        "DoNotEngage",
+                        "NeutralEngagement",
+                        "AggressiveEngagement"
+                    ]
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Arctic_moa",
+                    "keyPath": "SupportedCombatStates",
+                    "keyValue": [
+                        "DoNotEngage",
+                        "NeutralEngagement",
+                        "AggressiveEngagement"
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Some containers max slots increased",
+            "data_pak": "Inventory\\D_InventoryInfo.json",
+            "keys_to_modify": [
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Refrigerator",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 48
+                
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Backpack",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 96
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Player_Grave",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 500
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Container",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 20
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Large_Container",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 150
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Campfire",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 16
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Medium_Container",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 25
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Storage_Wood_Crate_Medium",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 60
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Storage_Wood_Cupboard",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 60
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "IceBox",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 20
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Fireplace",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 20
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Deep_Freeze",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 48
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Fishing_Trap",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 16
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Processor_T4",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 64
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Storage_Wood_Crate_Small",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 30
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Large_Advanced_Aquarium",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 24
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Seed_Pouch",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 26
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Medicine_Bag",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 24
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Seed_Pouch_T2",
+                    "keyPath": "StartingSlots",
+                    "keyValue": 36
+                }
+            ]
+        },
+        {
+            "description": "Fillables stored units maxed out",
+            "data_pak": "Traits\\D_Fillable.json",
+            "keys_to_modify": [
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Portable_Tank_Biofuel",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 2000000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Battery_T3",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 250000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Battery",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 100000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Jerrycan",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 100000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Battery_Shelf_T3",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 10000000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Battery_T4",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 30000000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Battery_Shelf_T4",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 60000000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Flashlight",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 32500
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Battery_Lamp",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 65000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Milk_Bucket",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 50000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Milk_Bottle",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 20000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Fillable_Water_150L",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 1500000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Fillable_Water_250L",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 2500000
+                },
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "Fillable_Water_1000L",
+                    "keyPath": "MaximumStoredUnits",
+                    "keyValue": 10000000
+                }
+            ]
+        },
+        {
+            "description": "All inventory itens max stack size fixed in 5000",
+            "data_pak": "Traits\\D_Itemable.json",
+            "keys_to_modify": [
+                {
+                    "isList": true,
+                    "listName": "Rows",
+                    "listKey": "Name",
+                    "listValue": "*",
+                    "keyPath": "MaxStack",
+                    "keyValue": 5000
+                }
+            ]
+        }
+    ]
+}
